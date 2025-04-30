@@ -1,0 +1,204 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript",
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "prettier",
+    "import",
+    "unused-imports"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-no-useless-fragment": 0,
+    "import/prefer-default-export": "off",
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "prefer-arrow-callback": "off",
+    "no-var": "error",
+    "no-dupe-keys": "error",
+    "react/prop-types": "off",
+    "react/jsx-pascal-case": "off",
+    "camelcase": "off",
+    "no-param-reassign": "warn",
+    "react/no-array-index-key": "warn",
+    "no-plusplus" : "warn",
+    "no-shadow" : "warn",
+    "no-use-before-define" : "warn",
+    "react/function-component-definition": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-named-default": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "no-nested-ternary": 0,
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "none", "ignoreRestSiblings": false }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelAttributes": ["htmlFor"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.stories.js",
+          "**/*.stories.jsx",
+          "**/*.stories.ts",
+          "**/*.stories.tsx"
+        ]
+      }
+    ],
+    "react/require-default-props": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react-query",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react-toastify",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@emotion/**",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "react-js-pagination",
+            "group": "external",
+            "position": "after"
+          },
+          {
+            "pattern": "@ComponentFarm/modules/layout/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@ApiFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@InterfaceFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@ComponentFarm/modules/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@ComponentFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@HookFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@MobxFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@UtilFarm/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "[./]**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "quotes": ["error", "single"],
+    "arrow-parens": ["error", "as-needed"],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "arrowParens": "avoid",
+        "semi": true,
+        "tabWidth": 2,
+        "printWidth": 100,
+        "trailingComma": "es5"
+      }
+    ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ]
+  },
+  "globals": {
+    "React": "writable"
+  }
+}
