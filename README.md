@@ -1,6 +1,6 @@
 # SimpleWebpackBoiler - 모던 웹 개발 보일러플레이트
 
-![Webpack](https://webpack.js.org/assets/icon-square-big.svg)
+![Webpack](https://webpack.js.org/assets/icon-square-big.svg){ width=50% }
 
 ## 프로젝트 개요
 
